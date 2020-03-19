@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movie Single Page Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="It's a CMS without a head">
+  <meta name="author" content="Rasmus Cederdorff">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+</head>
+
+<body>
+  <header>
+    <h1>Film SPA</h1>
+  </header>
+
+  <p id="searchID"><input id="search" type="search" placeholder="Søg film..." onkeyup="search(this.value)"></p>
+
+  <section id="filter">
+    <p>Her er det muligt at filtrere filmene efter genrer, eller du kan scrolle igennem udvalget af film.</p>
+    <input type="checkbox" class="check" id="action" onclick="filter()"><label class="label" for="action">Action</label>
+    <input type="checkbox" class="check" id="animation" onclick="filter()"><label class="label"
+      for="animation">Animation</label>
+    <input type="checkbox" class="check" id="boernefilm" onclick="filter()"><label class="label"
+      for="boernefilm">Børnefilm</label>
+    <input type="checkbox" class="check" id="danskefilm" onclick="filter()"><label class="label" for="danskefilm">Danske
+      Film</label>
+    <input type="checkbox" class="check" id="dokumentar" onclick="filter()"><label class="label"
+      for="dokumentar">Dokumentar</label>
+    <input type="checkbox" class="check" id="drama" onclick="filter()"><label class="label" for="drama">Drama</label>
+    <input type="checkbox" class="check" id="eventyr" onclick="filter()"><label class="label"
+      for="eventyr">Eventyr</label>
+    <input type="checkbox" class="check" id="gyser" onclick="filter()"><label class="label" for="gyser">Gyser</label>
+    <input type="checkbox" class="check" id="komedie" onclick="filter()"><label class="label"
+      for="komedie">Komedie</label>
+    <input type="checkbox" class="check" id="krigsfilm" onclick="filter()"><label class="label"
+      for="krigsfilm">Krigsfilm</label>
+    <input type="checkbox" class="check" id="krimi" onclick="filter()"><label class="label" for="krimi">Krimi</label>
+    <input type="checkbox" class="check" id="romantik" onclick="filter()"><label class="label"
+      for="romantik">Romantik</label>
+    <input type="checkbox" class="check" id="sifi" onclick="filter()"><label class="label" for="sifi">Science
+      fiction</label>
+    <input type="checkbox" class="check" id="thriller" onclick="filter()"><label class="label"
+      for="thriller">Thriller</label>
+    <!-- <input type="checkbox" class="check" id="alle" onclick="showAll()"><label class="label" for="alle">Alle</label> -->
+  </section>
+
+  <section id="movie-container" class="grid-container"></section>
+
+  <!-- loader  -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
